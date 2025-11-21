@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app_starter/view/pages/form_screen.dart';
 import 'package:note_app_starter/view/widgets/note_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,7 +23,10 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-        
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const FormScreen()),
+          );
         },
         child: const Icon(Icons.add),
       ),
